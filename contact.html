@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment | Malik's Smile N Glow, Kota</title>
+<meta name="description" content="Book your dental or cosmetic appointment at Malik's Smile N Glow, Talwandi, Kota. Call, WhatsApp or fill the form.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  #form-confirm{display:none;margin-top:16px;padding:14px 16px;border-radius:var(--radius-sm);background:rgba(37,211,102,.12);color:#1a7a3d;font-size:13.5px;font-weight:700;}
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="mark">Malik's <span>Smile N Glow</span></div><div class="bar"></div></div>
+<div id="scroll-progress"></div>
+<div id="cursor-glow"></div>
+
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <div class="mark">M</div>
+      <div class="name">Smile N Glow<small>Dr. Mayank Malik</small></div>
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Doctor</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Appointment</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <a href="contact.html" class="btn btn-gold btn-sm">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Get In Touch</div>
+    <h1>Book Your Appointment</h1>
+    <p class="breadcrumb"><a href="index.html">Home</a> / Appointment</p>
+  </div>
+</section>
+
+<!-- APPOINTMENT FORM -->
+<section>
+  <div class="container">
+    <div class="appointment-wrap reveal">
+      <div class="appointment-side">
+        <h3>Visit or Reach Us</h3>
+        <p>Prefer to talk directly? Call, WhatsApp, or drop by the clinic — we're happy to help you choose the right treatment.</p>
+        <div class="contact-line"><i class="fa-solid fa-location-dot"></i><div><b>Clinic Address</b><span>Talwandi, Kota, Rajasthan</span></div></div>
+        <div class="contact-line"><i class="fa-solid fa-phone"></i><div><b>Phone</b><span>+91 97822 58787 &nbsp;/&nbsp; +91 80786 52128</span></div></div>
+        <div class="contact-line"><i class="fa-brands fa-whatsapp"></i><div><b>WhatsApp</b><span>+91 97822 58787</span></div></div>
+        <div class="contact-line"><i class="fa-solid fa-clock"></i><div><b>Working Hours</b><span>Mon – Sat: 10:00 AM – 8:00 PM</span></div></div>
+        <div class="contact-line"><i class="fa-solid fa-envelope"></i><div><b>Email Support</b><span>care@maliksmilenglow.in</span></div></div>
+        <div class="hero-actions" style="margin-top:30px;">
+          <a href="tel:+919782258787" class="btn btn-gold btn-sm"><i class="fa-solid fa-phone"></i> Call Now</a>
+          <a href="https://wa.me/919782258787" target="_blank" class="btn btn-whatsapp btn-sm"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="appointment-form">
+        <h3 style="margin-bottom:8px;">Book an Appointment</h3>
+        <p style="color:var(--grey);font-size:14px;margin-bottom:26px;">Fill the form and we'll confirm your slot over WhatsApp.</p>
+        <form id="appointment-form">
+          <div class="form-row">
+            <div class="field"><label for="f-name">Full Name</label><input type="text" id="f-name" placeholder="Your name" required></div>
+            <div class="field"><label for="f-phone">Phone Number</label><input type="tel" id="f-phone" placeholder="+91 00000 00000" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-treatment">Treatment</label>
+              <select id="f-treatment" required>
+                <option value="" disabled selected>Select a treatment</option>
+                <option>Smile Designing</option>
+                <option>Root Canal Treatment</option>
+                <option>Dental Implants</option>
+                <option>Teeth Whitening</option>
+                <option>Scaling &amp; Polishing</option>
+                <option>Cosmetic Dentistry</option>
+                <option>Tooth Extraction</option>
+                <option>Orthodontic Treatment</option>
+                <option>Digital X-Ray</option>
+                <option>Hydrafacial</option>
+                <option>Chemical Peel</option>
+                <option>Microblading</option>
+                <option>Mesotherapy</option>
+                <option>Hair Treatment</option>
+                <option>Facial Aesthetics</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-date">Preferred Date</label><input type="date" id="f-date"></div>
+          </div>
+          <div class="field"><label for="f-message">Message</label><textarea id="f-message" placeholder="Tell us a little about your concern (optional)"></textarea></div>
+          <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-calendar-check"></i> Book Appointment</button>
+          <div id="form-confirm"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section style="background:var(--ivory-2)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Find Us</div>
+      <h2>Talwandi, Kota, Rajasthan</h2>
+      <svg class="smile-arc" viewBox="0 0 120 26"><path d="M4 4 Q60 30 116 4"/></svg>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe src="https://www.google.com/maps?q=Talwandi,Kota,Rajasthan&output=embed" loading="lazy" allowfullscreen title="Malik's Smile N Glow location map"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item open">
+        <div class="faq-q"><span>Is the treatment painful?</span><i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a" style="max-height:200px;"><p>We use modern, gentle protocols including local anaesthesia where needed, so most patients describe our treatments — including root canals — as pain-free or minimally uncomfortable.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Do I need an appointment or can I walk in?</span><i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a"><p>Appointments are recommended so we can plan your visit properly, but walk-ins are welcome — we'll accommodate you as soon as a slot opens.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What are your working hours?</span><i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a"><p>The clinic is open Monday to Saturday, 10:00 AM to 8:00 PM. Sunday appointments can be arranged on request.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Do you offer both dental and cosmetic treatments in one visit?</span><i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a"><p>Yes — Dr. Malik is a Dental Surgeon and Medical Cosmetologist, so many patients combine a dental treatment with a facial aesthetic session in the same visit.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>How can I book an appointment?</span><i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a"><p>You can call us, message us on WhatsApp, or fill the appointment form on this page — our team will confirm your slot promptly.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="name">Smile N Glow <span>Dental &amp; Cosmetic Clinic</span></div>
+        <p>Premium dental &amp; facial aesthetic care in Talwandi, Kota, led by Dr. Mayank Malik — Dental Surgeon &amp; Medical Cosmetologist.</p>
+        <div class="footer-social">
+          <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/919782258787" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Doctor</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Appointment</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Treatments</h4><ul>
+        <li><a href="services.html">Smile Designing</a></li>
+        <li><a href="services.html">Dental Implants</a></li>
+        <li><a href="services.html">Hydrafacial</a></li>
+        <li><a href="services.html">Microblading</a></li>
+        <li><a href="services.html">Cosmetic Dentistry</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><i class="fa-solid fa-location-dot"></i>&nbsp; Talwandi, Kota, Rajasthan</li>
+        <li><a href="tel:+919782258787">+91 97822 58787</a></li>
+        <li><a href="tel:+918078652128">+91 80786 52128</a></li>
+        <li>Mon – Sat: 10:00 AM – 8:00 PM</li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Malik's Smile N Glow Dental &amp; Cosmetic Clinic. All rights reserved.</span>
+      <span>Crafted with care in Kota, Rajasthan</span>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-stack">
+  <a href="https://wa.me/919782258787" target="_blank" class="fab fab-whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a href="tel:+919782258787" class="fab fab-call" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+  <button class="fab fab-top" id="fab-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

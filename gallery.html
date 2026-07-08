@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Before &amp; After Gallery | Malik's Smile N Glow, Kota</title>
+<meta name="description" content="See real smile &amp; skin transformations at Malik's Smile N Glow, Kota.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .gallery-item{border-radius:var(--radius-md);overflow:hidden;position:relative;cursor:pointer;box-shadow:var(--shadow-tight);}
+  .gallery-item img{height:280px;width:100%;object-fit:cover;transition:transform .6s var(--ease);}
+  .gallery-item:hover img{transform:scale(1.08);}
+  .gallery-item .cap{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(0deg,rgba(11,31,75,.85),transparent);color:#fff;font-size:13px;font-weight:700;}
+  @media(max-width:900px){.gallery-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.gallery-grid{grid-template-columns:1fr;}}
+  #lightbox{position:fixed;inset:0;background:rgba(11,31,75,.92);display:none;align-items:center;justify-content:center;z-index:5000;padding:30px;}
+  #lightbox.open{display:flex;}
+  #lightbox img{max-width:90vw;max-height:85vh;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.5);}
+  #lightbox-close{position:absolute;top:26px;right:30px;width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--royal);border:none;font-size:18px;}
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="mark">Malik's <span>Smile N Glow</span></div><div class="bar"></div></div>
+<div id="scroll-progress"></div>
+<div id="cursor-glow"></div>
+
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <div class="mark">M</div>
+      <div class="name">Smile N Glow<small>Dr. Mayank Malik</small></div>
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Doctor</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Appointment</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <a href="contact.html" class="btn btn-gold btn-sm">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Real Results</div>
+    <h1>Before &amp; After Gallery</h1>
+    <p class="breadcrumb"><a href="index.html">Home</a> / Gallery</p>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER SLIDER -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Drag To Compare</div>
+      <h2>Transformations, side by side</h2>
+      <svg class="smile-arc" viewBox="0 0 120 26"><path d="M4 4 Q60 30 116 4"/></svg>
+    </div>
+    <div class="ba-slider reveal">
+      <span class="ba-label before">Before</span>
+      <span class="ba-label after">After</span>
+      <img class="before-img" src="https://images.unsplash.com/photo-1601058268499-e52658b8bb88?q=80&w=1000&auto=format&fit=crop" alt="Before treatment">
+      <img class="after-img" src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1000&auto=format&fit=crop" alt="After treatment">
+      <div class="ba-handle"></div>
+    </div>
+    <div class="ba-nav">
+      <button class="ba-dot active" data-before="https://images.unsplash.com/photo-1601058268499-e52658b8bb88?q=80&w=1000&auto=format&fit=crop" data-after="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1000&auto=format&fit=crop"></button>
+      <button class="ba-dot" data-before="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000&auto=format&fit=crop" data-after="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=1000&auto=format&fit=crop"></button>
+      <button class="ba-dot" data-before="https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=1000&auto=format&fit=crop" data-after="https://images.unsplash.com/photo-1580281657702-257584239a55?q=80&w=1000&auto=format&fit=crop"></button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY GRID -->
+<section style="background:var(--ivory-2)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Our Work</div>
+      <h2>Smile &amp; skin transformations</h2>
+    </div>
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1606811951341-9f9d4c9c9c9c?q=80&w=700&auto=format&fit=crop" alt="Smile design result"><div class="cap">Smile Designing</div></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=700&auto=format&fit=crop" alt="Dental implant result"><div class="cap">Dental Implants</div></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=700&auto=format&fit=crop" alt="Teeth whitening result"><div class="cap">Teeth Whitening</div></div>
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=700&auto=format&fit=crop" alt="Hydrafacial glow result"><div class="cap">Hydrafacial Glow</div></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=700&auto=format&fit=crop" alt="Microblading brows"><div class="cap">Microblading</div></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=700&auto=format&fit=crop" alt="Clinic treatment room"><div class="cap">Treatment Room</div></div>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox"><button id="lightbox-close"><i class="fa-solid fa-xmark"></i></button><img id="lightbox-img" src="" alt="Gallery preview"></div>
+
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Your transformation could be next</h2>
+        <p>Book a free consultation to discuss the results you want.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-gold"><i class="fa-solid fa-calendar-check"></i> Book Appointment</a>
+        <a href="https://wa.me/919782258787" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="name">Smile N Glow <span>Dental &amp; Cosmetic Clinic</span></div>
+        <p>Premium dental &amp; facial aesthetic care in Talwandi, Kota, led by Dr. Mayank Malik — Dental Surgeon &amp; Medical Cosmetologist.</p>
+        <div class="footer-social">
+          <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/919782258787" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Doctor</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Appointment</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Treatments</h4><ul>
+        <li><a href="services.html">Smile Designing</a></li>
+        <li><a href="services.html">Dental Implants</a></li>
+        <li><a href="services.html">Hydrafacial</a></li>
+        <li><a href="services.html">Microblading</a></li>
+        <li><a href="services.html">Cosmetic Dentistry</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><i class="fa-solid fa-location-dot"></i>&nbsp; Talwandi, Kota, Rajasthan</li>
+        <li><a href="tel:+919782258787">+91 97822 58787</a></li>
+        <li><a href="tel:+918078652128">+91 80786 52128</a></li>
+        <li>Mon – Sat: 10:00 AM – 8:00 PM</li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Malik's Smile N Glow Dental &amp; Cosmetic Clinic. All rights reserved.</span>
+      <span>Crafted with care in Kota, Rajasthan</span>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-stack">
+  <a href="https://wa.me/919782258787" target="_blank" class="fab fab-whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a href="tel:+919782258787" class="fab fab-call" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+  <button class="fab fab-top" id="fab-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('#gallery-grid .gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('open');
+    });
+  });
+  document.getElementById('lightbox-close').addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('open'); });
+</script>
+</body>
+</html>
