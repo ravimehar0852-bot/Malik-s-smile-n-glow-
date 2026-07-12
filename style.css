@@ -516,3 +516,19 @@ footer{background:var(--royal);color:rgba(255,255,255,.75);padding:90px 0 0;}
     overflow:hidden;
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
+.mark{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.mark img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
